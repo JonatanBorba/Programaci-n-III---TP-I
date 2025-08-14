@@ -63,3 +63,44 @@ productos.forEach((producto, index) => {
 });
 console.log('------------------------------------------------------------------------');  
 
+/*
+4. Manipulación de Arrays:
+1. Agregar dos elementos al final del array productos utilizando push().
+2. Eliminar el último elemento del array productos utilizando pop().
+3. Agregar un nuevo elemento al inicio del array productos utilizando unshift().
+4. Elimina el primer elemento del array productos utilizando shift().
+
+5. Crear un nuevo array llamado productosConStock que contenga solo los elementos del array productos
+donde el stock sea mayor que 0 utilizando filter().
+*/
+let productosConStock = productos.filter(producto => producto.stock > 0);
+muestraDatos(productosConStock);
+/*
+6. Crear un nuevo array llamado nombresProductos que contenga solo los nombres de todos los
+productos en el inventario utilizando map().
+*/
+let nombresProductos = productos.map(productos.nombres);
+muestraDatos(nombresProductos);
+
+/*
+7. Encontrar y guardar en una variable el primer producto en productos que tenga un id específico (ej. id:3)
+utilizando find(). Si no lo encuentra, indicar que no existe.
+*/
+let primer = productos.find(producto => producto.id === 3);
+if (primer) {
+  console.log("producto encontrado" + primer);
+}  else {
+    console.log ("el producto no existe")
+  }
+
+/*
+8. Crear un nuevo array llamado productosOrdenados que contenga los productos ordenados por precio
+en orden decreciente. (investigar método sort()).
+*/
+let productosOrdenados = [productos].sort((a, b) => b.precio - a.precio);
+muestraDatos(productosOrdenados);
+
+/*
+Imprimir en consola el array original o creado para verificar las operaciones realizadas.
+*/
+
