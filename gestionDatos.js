@@ -79,7 +79,7 @@ muestraDatos(productosConStock);
 6. Crear un nuevo array llamado nombresProductos que contenga solo los nombres de todos los
 productos en el inventario utilizando map().
 */
-let nombresProductos = productos.map(productos.nombres);
+let nombresProductos = productos.map(producto => productos.nombres);
 muestraDatos(nombresProductos);
 
 /*
@@ -88,7 +88,7 @@ utilizando find(). Si no lo encuentra, indicar que no existe.
 */
 let primer = productos.find(producto => producto.id === 3);
 if (primer) {
-  console.log("producto encontrado" + primer);
+  console.log("producto encontrado", primer);
 }  else {
     console.log ("el producto no existe")
   }
@@ -97,7 +97,7 @@ if (primer) {
 8. Crear un nuevo array llamado productosOrdenados que contenga los productos ordenados por precio
 en orden decreciente. (investigar método sort()).
 */
-let productosOrdenados = [productos].sort((a, b) => b.precio - a.precio);
+let productosOrdenados = [...productos].sort((a, b) => b.precio - a.precio);
 muestraDatos(productosOrdenados);
 
 /*
