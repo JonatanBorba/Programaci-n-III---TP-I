@@ -130,7 +130,6 @@ console.log(nombresProductos);
 
 //7. Encontrar y guardar en una variable el primer producto en productos que tenga un id específico (ej. id:3)
 //utilizando find(). Si no lo encuentra, indicar que no existe.
-// FIND()
 let primerProducto = productos.find(producto => producto.id == 3);
 if (typeof primerProducto === "undefined") {
   console.log("\n No hay productos con ID 3");
