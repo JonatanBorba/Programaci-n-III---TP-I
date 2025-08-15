@@ -26,7 +26,7 @@ let productos = [
   { id: 1, nombre: "Cuaderno", precio: 4500, stock: 35 },
   { id: 2, nombre: "Biromes", precio: 2125, stock: 20 },
   { id: 3, nombre: "Goma de Borrar", precio: 120, stock: 10 },
-  { id: 4, nombre: "Carpetas", precio: 3500, stock: 18 },
+  { id: 4, nombre: "Carpetas", precio: 3500, stock: 0 },
   { id: 5, nombre: "lapices", precio: 200, stock: 22 },  
 ];
 
@@ -63,3 +63,38 @@ productos.forEach((producto, index) => {
 });
 console.log('------------------------------------------------------------------------');  
 
+/*
+4. Manipulación de Arrays:
+1. Agregar dos elementos al final del array productos utilizando push().
+2. Eliminar el último elemento del array productos utilizando pop().
+3. Agregar un nuevo elemento al inicio del array productos utilizando unshift().
+4. Elimina el primer elemento del array productos utilizando shift().
+5. Crear un nuevo array llamado productosConStock que contenga solo los elementos del array productos
+donde el stock sea mayor que 0 utilizando filter().
+6. Crear un nuevo array llamado nombresProductos que contenga solo los nombres de todos los
+productos en el inventario utilizando map().
+7. Encontrar y guardar en una variable el primer producto en productos que tenga un id específico (ej. id:3)
+utilizando find(). Si no lo encuentra, indicar que no existe.
+8. Crear un nuevo array llamado productosOrdenados que contenga los productos ordenados por precio
+en orden decreciente. (investigar método sort()).
+Imprimir en consola el array original o creado para verificar las operaciones realizadas.
+*/
+
+//1
+productos.push(
+ { id: 6, nombre: "Anillos", precio: 150, stock: 20 },
+ { id: 7, nombre: "reglas", precio: 2325, stock: 10 });
+
+ console.log(productos);
+//2
+ productos.pop(7);
+ console.log(productos);
+//3
+ productos.unshift({ id: 8, nombre: "Corrector", precio: 310, stock: 95 });
+ console.log(productos);
+ //4
+ productos.shift(0);
+ console.log(productos);
+ //5
+  let productosConStock = productos.filter(producto => producto.stock > 0);
+  console.log(productosConStock);
